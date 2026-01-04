@@ -5,7 +5,8 @@ window.addEventListener("message", (e) => {
     if (e.data.action === "open") {
         let players = e.data.players;
 
-        players.sort((a, b) => b.joinedAgo - a.joinedAgo);
+
+        players.sort((a, b) => a.joinTimestamp - b.joinTimestamp);
 
         list.innerHTML = "";
 
